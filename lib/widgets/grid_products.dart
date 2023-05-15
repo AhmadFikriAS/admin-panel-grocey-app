@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 import '../consts/constants.dart';
-import '../sevices/utils.dart';
 import 'products_widget.dart';
 
 class ProductGridWidget extends StatelessWidget {
@@ -17,7 +16,6 @@ class ProductGridWidget extends StatelessWidget {
   final bool isInMain;
   @override
   Widget build(BuildContext context) {
-    final Color color = Utils(context).color;
     return StreamBuilder<QuerySnapshot>(
       //there was a null error just add those lines
       stream: FirebaseFirestore.instance.collection('products').snapshots(),

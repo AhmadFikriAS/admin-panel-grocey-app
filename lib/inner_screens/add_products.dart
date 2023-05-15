@@ -156,7 +156,6 @@ class _UploadProductFormState extends State<UploadProductForm> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Utils(context).getTheme;
     final color = Utils(context).color;
     final scaffoldColor = Theme.of(context).scaffoldBackgroundColor;
     Size size = Utils(context).getScreenSize;
@@ -275,8 +274,7 @@ class _UploadProductFormState extends State<UploadProductForm> {
                                               }
                                               return null;
                                             },
-                                            inputFormatters: <
-                                                TextInputFormatter>[
+                                            inputFormatters: <TextInputFormatter>[
                                               FilteringTextInputFormatter.allow(
                                                 RegExp(r'[0-9.]'),
                                               ),

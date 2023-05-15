@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:grocery_admin_panel/consts/constants.dart';
 
 import '../responsive.dart';
-import '../sevices/utils.dart';
 
 class Header extends StatelessWidget {
   const Header({
@@ -17,9 +16,6 @@ class Header extends StatelessWidget {
   final bool showTextField;
   @override
   Widget build(BuildContext context) {
-    final theme = Utils(context).getTheme;
-    final color = Utils(context).color;
-
     return Row(
       children: [
         if (!Responsive.isDesktop(context))

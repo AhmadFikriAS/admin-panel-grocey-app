@@ -35,6 +35,7 @@ class _ProductWidgetState extends State<ProductWidget> {
           .collection('products')
           .doc(widget.id)
           .get();
+      // ignore: unnecessary_null_comparison
       if (productsDoc == null) {
         return;
       } else {

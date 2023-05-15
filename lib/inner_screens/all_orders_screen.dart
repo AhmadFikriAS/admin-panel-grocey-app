@@ -1,6 +1,4 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:grocery_admin_panel/sevices/utils.dart';
 import 'package:grocery_admin_panel/widgets/order_list.dart';
 import 'package:provider/provider.dart';
 import 'package:grocery_admin_panel/controllers/MenuController.dart'
@@ -20,7 +18,6 @@ class AllOrdersScreen extends StatefulWidget {
 class _AllOrdersScreenState extends State<AllOrdersScreen> {
   @override
   Widget build(BuildContext context) {
-    Size size = Utils(context).getScreenSize;
     return Scaffold(
       key: context.read<menuController.MenuController>().getOrdersScaffoldKey,
       drawer: const SideMenu(),
